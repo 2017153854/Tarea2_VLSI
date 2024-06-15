@@ -105,7 +105,7 @@ VD D 0 0
 
 
 *----------------------------------------------------------------------
-* Stimulus
+* Measures
 *----------------------------------------------------------------------
 .tran 500ps 8000ps
 
@@ -118,6 +118,9 @@ VD D 0 0
 + TARG v(F) VAL='SUPPLY/2' FALL=1
 
 .measure tpd param='(tpdr+tpdf)/2' * average prop delay
+
+*Para la potencia promedio
+.measure pwr AVG P(vdd) FROM=0ns TO=10ns
 *----------------------------------------------------------------------
 
 
